@@ -3,6 +3,8 @@ const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 const port = 3000;
 const app = express();
+const bcrypt = require("bcryptjs");
+const { check, validationResult } = require("express-validator");
 const connection = mysql.createConnection({
   host: "server2.bsthun.com",
   port: "6105",
